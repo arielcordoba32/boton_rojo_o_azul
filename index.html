@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elige tu destino - ¿Rojo o Azul?</title>
+    <meta name="description" content="Una aplicación interactiva para elegir tu destino. Toma una decisión entre el botón rojo y el botón azul y descubre si has ganado o perdido.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow" id="bg-glow"></div>
+    
+    <main class="app-container">
+        <section class="glass-card" id="app-card">
+            <!-- Game Screen (Choices) -->
+            <div class="screen-section" id="screen-choices">
+                <header class="game-header">
+                    <h1 class="game-title">Elige tu destino</h1>
+                    <p class="game-subtitle">Dos portales ante ti. Uno te guiará al triunfo, el otro a la perdición. Elige con sabiduría.</p>
+                </header>
+                
+                <div class="choices-wrapper">
+                    <button id="btn-red" class="destiny-btn btn-red" aria-label="Elegir el portal rojo">
+                        <span class="btn-glow"></span>
+                        <span class="btn-content">Portal Rojo</span>
+                    </button>
+                    <button id="btn-blue" class="destiny-btn btn-blue" aria-label="Elegir el portal azul">
+                        <span class="btn-glow"></span>
+                        <span class="btn-content">Portal Azul</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Result Screen -->
+            <div class="screen-section hidden" id="screen-result">
+                <div class="result-badge" id="result-badge">
+                    <div class="badge-icon" id="badge-icon"></div>
+                </div>
+                
+                <h2 class="result-message" id="result-message">Has ganado</h2>
+                <p class="result-desc" id="result-desc">El destino ha sonreído a tu elección y has salido victorioso de esta prueba.</p>
+                
+                <button id="btn-restart" class="restart-btn" aria-label="Volver a jugar y elegir de nuevo">
+                    <span>Volver a jugar</span>
+                </button>
+            </div>
+        </section>
+        
+        <footer class="app-footer">
+            <p>Desarrollado con pasión. Diseña tu propio camino.</p>
+        </footer>
+    </main>
+
+    <!-- JS Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
